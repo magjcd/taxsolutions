@@ -1,0 +1,7 @@
+ <?PHP
+
+echo "IP: ".$_SERVER["REMOTE_ADDR"]; //$_SERVER["HTTP_CF_CONNECTING_IP"];
+echo "Client IP: ". $_SERVER["HTTP_CLIENT_IP"];
+echo "X FORWARD: ". $_SERVER["HTTP_X_FORWARD_FOR"];
+
+?>

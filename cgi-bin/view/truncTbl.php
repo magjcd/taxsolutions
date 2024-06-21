@@ -1,0 +1,4 @@
+<?php
+$ContObj->truncTbl();
+
+?>

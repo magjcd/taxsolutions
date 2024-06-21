@@ -1,0 +1,25 @@
+DirectoryIndex magTech.php
+
+RewriteEngine On
+
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^login?$ login.php 
+RewriteRule ^index?$ index.php
+RewriteRule ^logout?$ logout.php
+
+RewriteRule ^index/([0-9a-zA-Z_-]+) index.php?page=$1
+#RewriteRule ^index/([0-9a-zA-Z_-]+)/([0-9]+) index.php?page=$1&id=$2
+#RewriteRule ^index/([0-9a-zA-Z_-]+) index.php?page=$1
+#RewriteRule ^index/([0-9a-zA-Z_-]+) index.php?page=nClient
+#RewriteRule ^index/([0-9a-zA-Z_-]+) index.php?page=changePwd
+
+Options -Indexes
+IndexIgnore *.php
+IndexIgnore pdf
+
+
+#order allow,deny
+#allow from all
+#deny from 111.119.183.53

@@ -1,0 +1,644 @@
+[
+    {
+        "uLogDT": "31_07_2021 12:55:12 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "31_07_2021 02:43:22 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "30_07_2021 09:03:50 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "30_07_2021 03:46:43 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "30_06_2021 01:10:40 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "29_07_2021 08:45:52 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "28_07_2021 10:44:25 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "28_07_2021 10:12:22 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "27_06_2021 PST 03:12:55 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "27_06_2021 03:53:42 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "26_07_2021 08:38:56 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "26_07_2021 07:44:19 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "23_07_2021 11:39:14 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "23_07_2021 01:30:52 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "23_07_2021 01:16:02 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "23_06_2021 PST 04:59:21 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "20_07_2021 12:05:01 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "19_07_2021 12:43:35 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "19_07_2021 05:42:05 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "19_07_2021 05:13:08 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "19_07_2021 04:53:36 PM",
+        "userIP": "192.168.43.1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "19_07_2021 01:57:52 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "19_07_2021 01:38:48 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "19_07_2021 01:32:16 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "19_07_2021 01:19:49 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "19_06_2021 PST 03:44:10 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "18_06_2021 PST 05:14:59 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "18_06_2021 PST 05:08:41 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "18_06_2021 PST 05:06:58 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "13_07_2021 12:59:55 AM",
+        "userIP": "192.168.43.1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "13_07_2021 12:56:45 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "13_07_2021 12:37:17 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "13_07_2021 09:31:54 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "13_07_2021 01:17:02 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "13_07_2021 01:10:15 AM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "director"
+    },
+    {
+        "uLogDT": "13_07_2021 01:06:05 AM",
+        "userIP": "192.168.43.1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "11_07_2021 11:33:15 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "11_07_2021 04:55:40 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "10_07_2021 12:57:53 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "10_07_2021 12:18:46 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "10_07_2021 11:27:04 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "09_07_2021 12:52:37 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "09_07_2021 12:33:52 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "09_07_2021 12:04:13 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "09_07_2021 01:19:48 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "director"
+    },
+    {
+        "uLogDT": "09_07_2021 01:19:17 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 12:42:15 AM",
+        "userIP": "::1",
+        "userNm": "Kashif Shah",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 12:39:07 AM",
+        "userIP": "192.168.43.1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "07_07_2021 12:33:41 AM",
+        "userIP": "192.168.43.1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "07_07_2021 12:25:29 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 11:55:11 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 11:46:46 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 11:31:16 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 11:01:36 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "07_07_2021 10:51:19 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 05:36:40 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 05:33:11 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 05:12:30 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 04:57:52 PM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 04:46:49 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 02:35:26 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 01:51:14 AM",
+        "userIP": "::1",
+        "userNm": "Vivek Anand",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "07_07_2021 01:34:27 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "06_07_2021 11:06:38 PM",
+        "userIP": "127.0.0.1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "06_07_2021 03:30:38 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "06_07_2021 03:14:58 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "06_07_2021 01:41:40 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 12:29:39 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 11:12:25 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "05_07_2021 10:30:47 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 10:10:32 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "05_07_2021 10:02:46 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 09:25:23 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 08:51:29 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "05_07_2021 08:49:56 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "05_07_2021 08:38:23 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 07:04:40 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "05_07_2021 06:33:42 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 04:49:37 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 03:02:28 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 03:00:02 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "05_07_2021 02:43:10 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "05_07_2021 01:53:50 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "04_07_2021 11:44:44 AM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "04_07_2021 02:03:04 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "03_07_2021 11:53:00 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "03_07_2021 11:27:32 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "03_07_2021 05:30:48 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "03_07_2021 05:30:13 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "03_07_2021 03:18:08 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_08_2021 06:58:04 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_08_2021 06:32:50 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "02_08_2021 06:07:26 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_08_2021 04:39:39 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "taxmagadmin"
+    },
+    {
+        "uLogDT": "02_08_2021 04:36:41 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "taxmagrep"
+    },
+    {
+        "uLogDT": "02_08_2021 03:18:28 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "02_08_2021 03:12:12 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_08_2021 02:45:30 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_08_2021 02:44:17 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_07_2021 10:25:21 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_07_2021 02:21:02 AM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_07_2021 01:47:23 AM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    },
+    {
+        "uLogDT": "02_07_2021 01:42:17 AM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "01_08_2021 10:09:34 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "01_08_2021 10:06:00 PM",
+        "userIP": "::1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "01_08_2021 09:49:17 PM",
+        "userIP": "192.168.43.1",
+        "userNm": "Yar Muhammad",
+        "userRole": "admin"
+    },
+    {
+        "uLogDT": "01_07_2021 03:20:26 PM",
+        "userIP": "::1",
+        "userNm": "Ashfaque Ahmed",
+        "userRole": "representative"
+    }
+]
