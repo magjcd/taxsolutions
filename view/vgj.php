@@ -2,9 +2,18 @@
 $gjDet = $ContObj->vGjEntDt();
 ?>
 <div class="full-width">
-	<div class="GenJounMessage"></div>	
 	<h1 class="heading-big">View Date wise General Journal</h1>
 	<div style="text-align: center;">
+<!-- 		<select id="vgj" autofocus>
+			<option value="">Select a General Journal</option>
+			<option disabled="disabled">-------------------------------------</option>
+			<?php if($gjDet){
+				foreach($gjDet as $gjData){
+				?>
+
+			<option value="<?php echo $gjData['gjDt'] ?>"><?php echo $gjData['gjDt'] ?></option>
+		<?php }}?>
+		</select> -->
 
 		<input type="text" name="vgj" id="vgj" list="vgjv" autofocus>
 		<datalist id="vgjv">

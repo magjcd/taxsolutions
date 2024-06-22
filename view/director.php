@@ -14,17 +14,14 @@ $noEntLed = $ContObj->noEntLed();
 
 			<div class="col-md-4 d-flex" style="display: inline-flex; justify-content: flex-start; align-items: flex-start;">
 
-				<h1 style="font-weight: bold;">MyTaxSol</h1>
-
-				
-
+				<h1 style="font-weight: bold;">SawReva</h1>
 			</div>
 
 
 
 			<div class="col-md-8 d-flex" style="display: inline-flex; justify-content: flex-start; align-items: flex-start;">
 
-				<h3 style="font-weight: bold; margin-top: 28px;">MyTaxSol</h3>
+				<h3 style="font-weight: bold; margin-top: 28px;">SawReva</h3>
 
 				<ul class="top-menu mt-4">
 
@@ -62,6 +59,9 @@ $noEntLed = $ContObj->noEntLed();
 							<li><a href="index?page=vHdWDt" accesskey="t"><i class="fa fa-file fa-lg fa-fw"></i>
 							Header Wise Report</a></li>
 
+							<li><a href="index?page=gjCSV" accesskey="v"><i class="fa fa-file fa-lg fa-fw"></i>
+							Upload GJ CSV</a></li>
+
 						</ul>
 
 					</li>
@@ -89,15 +89,7 @@ $noEntLed = $ContObj->noEntLed();
 							?>
 
 							<li class="prof-nm"><?php echo $uNm; ?></li>
-
-
-
-							<!-- <li><a href="index?page=profile">
-
-							<i class="fa fa-user-circle fa-lg fa-fw"></i>Profile</a></li> -->
-
-
-
+							
 							<li><a href="index?page=changePwd">
 
 							<i class="fa fa-lock fa-lg fa-fw"></i>Change Password</a></li>
@@ -205,16 +197,6 @@ $noEntLed = $ContObj->noEntLed();
 						?>
 
 					</div>
-
-
-
-					<!-- Another Row -->
-
-					<!-- <div class="row" style="background: #330099; color: #fff; margin-top: 2px;">
-
-						Another Row
-
-					</div> -->
 
 					<?php
 

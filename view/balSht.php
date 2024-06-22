@@ -40,24 +40,24 @@ $oeHd = $ContObj->vShdAccHD('Owner Equity');
 							$vAccSHd = $ContObj->vAccSHd($sHdId);
 
 							echo '<table style="width: 100%; color: #006699;">';
-							if($vAccSHd){
-								foreach($vAccSHd as $vAccSHdDet){
-									$accId = $vAccSHdDet['id'];
-									echo '<tr><td>'.$vAccSHdDet['clientNm'].'</td>';
+				// 			if($vAccSHd){
+				// 				foreach($vAccSHd as $vAccSHdDet){
+				// 					$accId = $vAccSHdDet['id'];
+				// 					echo '<tr><td>'.$vAccSHdDet['clientNm'].'</td>';
 								
 
-									$balShtAccSum = $ContObj->balShtAccSum($accId);
-									if($balShtAccSum){
-										foreach($balShtAccSum as $balShtAccSumDet){
-											if($balShtAccSumDet['Tbal'] >= 0){
-												echo '<td style="text-align: right;">'.number_format($balShtAccSumDet['Tbal']).'</td></tr>';
-											}else{
-												echo '<td style="text-align: right; color: red;">'.number_format($balShtAccSumDet['Tbal']).'</td></tr>';
-											}
-										}
-									}
-								}
-							}
+				// 					$balShtAccSum = $ContObj->balShtAccSum($accId);
+				// 					if($balShtAccSum){
+				// 						foreach($balShtAccSum as $balShtAccSumDet){
+				// 							if($balShtAccSumDet['Tbal'] >= 0){
+				// 								echo '<td style="text-align: right;">'.number_format($balShtAccSumDet['Tbal']).'</td></tr>';
+				// 							}else{
+				// 								echo '<td style="text-align: right; color: red;">'.number_format($balShtAccSumDet['Tbal']).'</td></tr>';
+				// 							}
+				// 						}
+				// 					}
+				// 				}
+				// 			}
 							echo '</table>';
 							?>
 						

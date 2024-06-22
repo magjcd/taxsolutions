@@ -24,7 +24,7 @@
 				<i class='fas fa-user-slash fa-lg fa-fw'></i></a></td>
 
 				<td style='width:30px;'> 
-				<a href='index.php?page=resetPass&rid=".$data['id']."' id='cs' style='color: #006699;'>
+				<a href='index.php?page=resetPass&rid=".$data['id']."' id='cs'>
 				<i class='fa fa-exchange fa-lg fa-fw'></i></a></td>
 				
 				</tr>";
@@ -38,7 +38,7 @@
 				<i class='fas fa-user-slash fa-lg fa-fw'></i></a></td>
 				
 				<td style='width:30px;'> 
-				<a href='index.php?page=resetPass&rid=".$data['id']."' id='cs' style='color: #006699;'>
+				<a href='index.php?page=resetPass&rid=".$data['id']."' id='cs'>
 				<i class='fa fa-exchange fa-lg fa-fw'></i></a></td>
 
 				</tr>";

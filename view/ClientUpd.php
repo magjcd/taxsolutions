@@ -66,12 +66,8 @@ if(isset($_POST['UpdClient'])){
 				if($drpDnCity){
 					foreach ($drpDnCity as $data) {
 				?>
-<!-- 					<option <?php echo $cCity; ?>
-					value="<?php echo $data['id']; ?>|<?php echo $data['cityNm']; ?>"><?php echo $data['cityNm']; ?></option> -->
-
-
-					<option <?php if($clData['cityId'] == $data['id']){ ?> selected = 'selected' <?php } ?>
-					value="<?php echo $data['id']; ?>|<?php echo $data['cityNm']; ?>"><?php echo $data['cityNm']; ?></option>					
+				<option <?php if($clData['cityId'] == $data['id']){ ?> selected = 'selected' <?php } ?>
+				value="<?php echo $data['id']; ?>|<?php echo $data['cityNm']; ?>"><?php echo $data['cityNm']; ?></option>					
 				<?php
 					}
 				}

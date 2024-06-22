@@ -44,11 +44,11 @@
 	<div style="overflow-x: auto;">
 	
 	<!-- Loader will load each time when data will be grabbed -->
-	<div id="box">
-		<div id="loader"></div>
-		<h3 id="loaderNm">SAWREVA</h3>
-		<h6 id="loadingNm">Loading...</h6>
-	</div>
+	<!--<div id="box">-->
+	<!--	<div id="loader"></div>-->
+	<!--	<h3 id="loaderNm">SAWREVA</h3>-->
+	<!--	<h6 id="loadingNm">Loading...</h6>-->
+	<!--</div>-->
 
 	<table id="vClients">
 	</table>		

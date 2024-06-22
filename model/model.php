@@ -69,7 +69,7 @@ class Model extends db_connect {
 		$columKeys = implode(",", array_keys($varArr));
 		$columVals = implode("','", array_values($varArr));
 
-		$sql = "INSERT INTO $table($columKeys) VALUES(N'$columVals')";
+		$sql = "INSERT INTO $table($columKeys) VALUES(N'$columVals');";
 		$sqlRes = $this->conn->query($sql);
 		return $sqlRes;
 		// $sql = $this->conn->prepare("INSERT INTO $table($columKeys) VALUES('$columVals')");

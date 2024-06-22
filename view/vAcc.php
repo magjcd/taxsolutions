@@ -36,11 +36,11 @@ $dt = date('Y-m-d', strtotime('+100 day'));
 
 	<div class="sDwAcc">
 
-	<div id="box">
-		<div id="loader"></div>
-		<h3 id="loaderNm">SAWREVA</h3>
-		<h6 id="loadingNm">Loading...</h6>
-	</div>		
+	<!--<div id="box">-->
+	<!--	<div id="loader"></div>-->
+	<!--	<h3 id="loaderNm">SAWREVA</h3>-->
+	<!--	<h6 id="loadingNm">Loading...</h6>-->
+	<!--</div>		-->
 	
 	</div>
 </div>

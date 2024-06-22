@@ -91,22 +91,10 @@ class Controller extends Model{
 
 				if($DbStatus == 'active'){
 
-					// if($rem != ""){
-
-					// 	setcookie($role, $un, time() + 60 * 60 * 7,"/");
-
-					// 	header("Location: index");
-
-					// 	//header("location: ../index");
-
-					// }else{
-
-					//session_start();
 					$this->chkSession();
 					// Sending User ID alogn with Full Name for further use Like updating Password etc
 					$_SESSION[$DbRole]=$id."_".$DbName."_".$DbRole;						
 					header("location: index");
-					//}
 
 				}else{
 					$this->messages[] = "<div class='message'>Your status is <strong>INACTIVE</strong>, contact the Administrator.</div>";
@@ -118,8 +106,6 @@ class Controller extends Model{
 			$this->messages[]  = "<div class='message'>Fill all the Fields.</div>";
 		}
 
-
-
 		// Check if any Error exists
 		if(count($this->messages) > 0){
 			foreach ($this->messages as $msg) {
@@ -128,10 +114,7 @@ class Controller extends Model{
 		}
 	}
 
-
-
 	// For Changing Password of User
-
 	public function ChagePwdC($pPwd,$nPwd,$cPwd){
 
 		$pPwd = $this->protect($pPwd);
@@ -407,8 +390,6 @@ class Controller extends Model{
 
 													$this->messages[] = "<div class='success-msg'>Record is Inserted Successfully.</div>";
 
-													//header("refresh:5; url=index?page=viewUser");
-
 													header("refresh:7; url=index?page=nUser");
 
 												}else{
@@ -548,10 +529,6 @@ class Controller extends Model{
 		$chgStat = $this->model->update('user',$stat,' id='.$sid);
 
 		if($chgStat == 1){
-
-			//echo "<div class='success-msg'>Status is changed successfully.<br />Wait.....</div>";
-
-			//header("refresh:5; url=index?page=viewUser");
 
 			header("location: index?page=viewUser");
 
@@ -1834,12 +1811,8 @@ class Controller extends Model{
 
 
 /*
-
 	Client Form Data for Drop Downs
-
 */
-
-
 
 	// Grabing Data for Clint's Status Drop Down
 
@@ -2294,16 +2267,11 @@ class Controller extends Model{
 	// public function viewClientsST($searchBy,$clSearch){
 
 	public function viewClientsST($clSearch){
-		//if($searchBy != ""){
+
 			$clSearch = $this->protect($clSearch);	
 
-			//$vClint = $this->model->fetchSingle('client',' '.$searchBy.' LIKE "%'.$clSearch.'%" ORDER BY clientNm');
 
 			$vClint = $this->model->fetchSingle('client',' busNm LIKE "%'.$clSearch.'%" OR clientNm LIKE "%'.$clSearch.'%" OR cnicNo LIKE "%'.$clSearch.'%" OR cityNm LIKE "%'.$clSearch.'%" AND sHdNm = "Accounts Receivable" ORDER BY clientNm ASC');
-
-		// public function viewClientsST($clSearch){
-
-		// 	$vClint = $this->model->fetchSingle('client',' clientNm LIKE "%'.$clSearch.'%" ORDER BY id ASC');
 
 			if($vClint->num_rows > 0){
 
@@ -2316,13 +2284,6 @@ class Controller extends Model{
 				return $data;
 
 			}
-
-		// }else{
-
-		// 	$this->messages[] = "Select Search Term.";
-
-		// }				
-
 
 
 		// Check if any Error exists
@@ -2362,8 +2323,6 @@ class Controller extends Model{
 				$repId = $repDet[0];
 				$repNm = $repDet[1];
 
-				//$CuID = trim(strip_tags(addslashes($this->model->conn->real_escape_string($CuID))));
-
 				$CuID = $this->protect($CuID);
 
 				if($cName != ""){
@@ -2375,11 +2334,6 @@ class Controller extends Model{
 						if(preg_match("/^['0-9']*$/", $cnicNo)){
 
 							if($cCity != ""){
-
-								// if(is_numeric($NTNfee) && is_numeric($STRNfee) && is_numeric($whtfee) && is_numeric($SRBfee) && is_numeric($BRBfee) && is_numeric($PRBfee)){
-
-									// Extracting City Array
-
 									$cCityArr = explode("|", $cCity);
 
 									$cCityId = $cCityArr[0];
@@ -2536,8 +2490,6 @@ class Controller extends Model{
 
 											$Cemail = $this->protect($Cemail);
 
-											// $remRes = trim(strip_tags(addslashes($this->model->conn->real_escape_string($remRes))));
-
 											$NTNno = $this->protect($NTNno);
 
 											$NTNfee = $this->protect($NTNfee);
@@ -2636,8 +2588,6 @@ class Controller extends Model{
 
 											'emId' => $Cemail,
 
-											// 'remarks' => $remRes,
-
 											'ntnNo' => $NTNno,
 
 											'ntnFee' => $NTNfee,
@@ -2706,14 +2656,6 @@ class Controller extends Model{
 
 									}
 
-								// }else{
-
-								// 	$this->messages[] = "All Fees Must be in Numeric form.";
-
-								// }
-
-
-
 							}else{
 
 								$this->messages[] = "Please select a valid City Name";
@@ -2744,68 +2686,34 @@ class Controller extends Model{
 
 			}
 
-
-
 			//Checks if any Error exist.
-
 			if(count($this->messages) > 0){
-
 				foreach ($this->messages as $msg) {
-
 					echo "<div class='message'>".$msg."</div>";
-
 				}
-
 			}
-
 	}
-
-
 
 	// Changing status( Active / Inactive) of Client by Admin
-
 	public function chgClStat($sid,$status){
-
 		$stat = array(
-
 			'status' => $status
-
 		);
-
 		$chgStat = $this->model->update('client',$stat,' id='.$sid);
-
 		if($chgStat == 1){
-
-			//echo "<div class='success-msg'>Status is changed successfully.<br />Wait.....</div>";
-
-			//header("refresh:5; url=index?page=viewUser");
-
 			header("location: index?page=viewClient");
-
 		}else{
-
 			$this->messages[] = "Status could'nt be changed.<br />Wait.....";
-
 		}
-
-
 
 		if(count($this->messages) > 0){
-
 			foreach ($this->messages as $msg) {
-
 				echo "<div class='message'>".$msg."</div>";
-
 			}
-
 		}
-
 	}
 
-
-
 	// View CSingle Client Profile
-
 	public function vSClient($id){
 
 		$id = $this->protect($id);
@@ -2852,18 +2760,8 @@ class Controller extends Model{
 
 	}
 
-
-
-
-
 /*
-
-
-
 ACCOUNTS RELATED AREA
-
-
-
 */
 
 	// Viewing Header
@@ -3122,17 +3020,6 @@ ACCOUNTS RELATED AREA
 
 	}
 
-		// for Balance Sheet balSht.php
-	// public function vAccSHd($sHdId){
-	// 	$vAccSHd = $this->model->fetchSingle('client'," sHdId = '".$sHdId."' ORDER BY clientNm ASC");
-	// 	if($vAccSHd->num_rows > 0){
-	// 		while ($row=$vAccSHd->fetch_assoc()) {
-	// 			$data[] = $row;
-	// 		}
-	// 		return $data;
-	// 	}
-	// }
-
 	// Accounts opened by ADMIN
 	public function vAcc() {
 
@@ -3197,7 +3084,6 @@ ACCOUNTS RELATED AREA
 		}else{
 			$this->messages[] = "<div class='message'>Account Name can't be Empty</div>";	
 		}
-		//$this->messages[] = "<div class='success-msg'>Received</div>";
 
 		// Checks if any Error exist.
 		if(count($this->messages) > 0){
@@ -3223,7 +3109,14 @@ ACCOUNTS RELATED AREA
 
 	// Previous / Current Balance of Representative
 	public function prevBalRep(){
-		$repDet = explode("_",$_SESSION['taxmagrep']);
+		if(isset($_SESSION['taxmagadmin'])){
+			$repDet = explode("_",$_SESSION['taxmagadmin']);
+		}elseif(isset($_SESSION['taxmagrep'])){
+			$repDet = explode("_",$_SESSION['taxmagrep']);
+		}elseif(isset($_SESSION['taxmagdir'])){
+			$repDet = explode("_",$_SESSION['taxmagdir']);
+		}
+		// $repDet = explode("_",$_SESSION['taxmagrep']);
 		$repId = $repDet[0];
 		$repNm = $repDet[1];
 
@@ -3255,179 +3148,189 @@ ACCOUNTS RELATED AREA
 
 	// Adding General Journal entries in Database
 
-	public function nGj($jdt,$clDet,$ft,$fYr,$desc,$dr,$cr,$repId,$repNm,$repLedAcc){
+	public function nGj($jdt,$clDet,$ft,$fYr,$desc,$dr,$cr,$repId,$repNm,$repLedAcc,$from = null){
+
 		$this->jdt = $this->protect($jdt);
 		$gjTm = date('h:i:s A');
 		$transDt = date('d-m-Y');
+		$currentDt = date('Y-m-d');
 		$this->fYr = $this->protect($fYr);
 		$this->desc = $this->protect($desc);
 		$this->dr = $this->protect($dr);
 		$this->cr = $this->protect($cr);
 		$repLedAcc = $this->protect($repLedAcc);
-
+		
 		if($jdt != ""){
-			if($repLedAcc != ""){
+			if($jdt <= $currentDt){
+				if($repLedAcc != ""){
 
-				$repLedAccArr = explode('|', $repLedAcc);
-				$repClId = $repLedAccArr[0];
-				$repHdId = $repLedAccArr[1];
-				$repHdNm = $repLedAccArr[2];
-				$repSHdId = $repLedAccArr[3];
-				$repSHdNm = $repLedAccArr[4];
-				$repClNm = $repLedAccArr[5];
+					$repLedAccArr = explode('|', $repLedAcc);
+					$repClId = $repLedAccArr[0];
+					$repHdId = $repLedAccArr[1];
+					$repHdNm = $repLedAccArr[2];
+					$repSHdId = $repLedAccArr[3];
+					$repSHdNm = $repLedAccArr[4];
+					$repClNm = $repLedAccArr[5];
 
-				if($clDet !=""){
-					$clArr = explode("|",$clDet);
-					$clId = $clArr[0];
-					$clNm = $clArr[1];
-					$ctId = $clArr[2];
-					$ctNm = $clArr[3];
-					$hdId = $clArr[4];
-					$hdNm = $clArr[5];
-					$sHdId = $clArr[6];
-					$sHdNm = $clArr[7];
-					$busNm = $clArr[8];
+					if($clDet !=""){
+						$clArr  = explode("|",$clDet);
+						$clId = $clArr[0];
+						$clNm = $clArr[1];
+						$ctId = $clArr[2];
+						$ctNm = $clArr[3];
+						$hdId = $clArr[4];
+						$hdNm = $clArr[5];
+						$sHdId = $clArr[6];
+						$sHdNm = $clArr[7];
+						$busNm = $clArr[8];
 
-					if($clId !='' && $clNm != '' && $ctId != '' && $ctNm != '' && $hdId != '' && $hdNm != '' && $sHdId != '' && $sHdNm != ''){
+						if($clId !='' && $clNm != '' && $ctId != '' && $ctNm != '' && $hdId != '' && $hdNm != '' && $sHdId != '' && $sHdNm != ''){
 
-						if($ft != ""){
-							$ftArr = explode('|', $ft);
-							$ftId = $ftArr[0];
-							$ftNm = $ftArr[1];
-							if($fYr != ""){
-								if($desc != ""){
-									if($dr != null || $cr != null){
-										
-										$varArr = array(
-											'gjDt' => $jdt,
-											'gjTm' => $gjTm,
-											'transDt' => $transDt,
-											'clientId' => $clId,
-											'clientNm' => $clNm,
-											'cityId' => $ctId,
-											'cityNm' => $ctNm,
-											'hdId' => $hdId,
-											'hdNm' => $hdNm,
-											'sHdId' => $sHdId,
-											'sHdNm' => $sHdNm,
-											'busNm' => $busNm,
-											'feeTpId' => $ftId,
-											'feeTp' => $ftNm,
-											'feeYr' => $fYr,
-											'description' => $desc,
-											'drAmt' => $dr,
-											'crAmt' => $cr,
-											'retGj' => 'GJ',
-											'repId' => $repId,
-											'repNm' => $repNm
-										);
+							if($ft != ""){
+								$ftArr = explode('|', $ft);
+								$ftId = $ftArr[0];
+								$ftNm = $ftArr[1];
+								if($fYr != ""){
+									if($desc != ""){
+										if($dr != "" || $cr != ""){
+											
+											$varArr = array(
+												'gjDt' => $jdt,
+												'gjTm' => $gjTm,
+												'transDt' => $transDt,
+												'clientId' => $clId,
+												'clientNm' => $clNm,
+												'cityId' => $ctId,
+												'cityNm' => $ctNm,
+												'hdId' => $hdId,
+												'hdNm' => $hdNm,
+												'sHdId' => $sHdId,
+												'sHdNm' => $sHdNm,
+												'busNm' => $busNm,
+												'feeTpId' => $ftId,
+												'feeTp' => $ftNm,
+												'feeYr' => $fYr,
+												'description' => $desc,
+												'drAmt' => $dr,
+												'crAmt' => $cr,
+												'retGj' => 'GJ',
+												'repId' => $repId,
+												'repNm' => $repNm
+											);
 
-										$insGj = $this->model->insert('ledger',$varArr);
-										if($insGj == 1){
+											$insGj = $this->model->insert('ledger',$varArr);
+											if($insGj == 1){
 
-											if($cr != null){
+									// 			if($cr != null){
 
-												$varArr = array(
-													'gjDt' => $jdt,
-													'gjTm' => $gjTm,
-													'transDt' => $transDt,
-													'clientId' => $repClId,
-													'clientNm' => $repClNm,
-													'cityId' => $ctId,
-													'cityNm' => $ctNm,
-													'hdId' => $repHdId,
-													'hdNm' => $repHdNm,
-													'sHdId' => $repSHdId,
-													'sHdNm' => $repSHdNm,
-													'busNm' => $busNm,
-													'feeTpId' => $ftId,
-													'feeTp' => $ftNm,
-													'feeYr' => $fYr,
-													'description' => $clId.'_'.$clNm.' => '.$desc,
-													'drAmt' => $cr,
-													'retGj' => 'GJ',
-													'repId' => $repId,
-													'repNm' => $repNm
-												);
+									// 				$varArr = array(
+									// 					'gjDt' => $jdt,
+									// 					'gjTm' => $gjTm,
+									// 					'transDt' => $transDt,
+									// 					'clientId' => $repClId,
+									// 					'clientNm' => $repClNm,
+									// 					'cityId' => $ctId,
+									// 					'cityNm' => $ctNm,
+									// 					'hdId' => $repHdId,
+									// 					'hdNm' => $repHdNm,
+									// 					'sHdId' => $repSHdId,
+									// 					'sHdNm' => $repSHdNm,
+									// 					'busNm' => $busNm,
+									// 					'feeTpId' => $ftId,
+									// 					'feeTp' => $ftNm,
+									// 					'feeYr' => $fYr,
+									// 					'description' => $clId.'_'.$clNm.' => '.$desc,
+									// 					'drAmt' => $cr,
+									// 					'crAmt' => $dr, // New Added remove if creates problem
+									// 					'retGj' => 'GJ',
+									// 					'repId' => $repId,
+									// 					'repNm' => $repNm
+									// 				);
 
-												$insRepLedAcc = $this->model->insert('ledger',$varArr);
-												if($insRepLedAcc == 1){
-													echo "<div class='success-msg'>Record is inserted Successfully.</div>";
-													// header("refresh:3;url=index?page=ngj");						?>
-													<script type="text/javascript">
-														setTimeout(function(){
-															window.location.replace('index?page=ngj')},1000);
-													</script>
-													<?php
-												}else{
-													$this->messages[] = "<div class='message'>Representative Ledger Record couldn't be entered</div>";
-												}
+									// 				$insRepLedAcc = $this->model->insert('ledger',$varArr);
+									// 				if($insRepLedAcc == 1){
+									// 					echo "<div class='success-msg'>Record is inserted Successfully.</div>";
+									// 					if($from != 'csv'){						
+									// 						?>
+									// 						<script type="text/javascript">
+									// 							setTimeout(function(){
+									// 								window.location.replace('index?page=ngj')},1000);
+									// 						</script>
+									// 						<?php
+									// 					}
+									// 				}else{
+									// 					$this->messages[] = "<div class='message'>Representative Ledger Record couldn't be entered</div>";
+									// 				}
+									// 			}else{
+
+													$varArr = array(
+														'gjDt' => $jdt,
+														'gjTm' => $gjTm,
+														'transDt' => $transDt,
+														'clientId' => $repClId,
+														'clientNm' => $repClNm,
+														'cityId' => $ctId,
+														'cityNm' => $ctNm,
+														'hdId' => $repHdId,
+														'hdNm' => $repHdNm,
+														'sHdId' => $repSHdId,
+														'sHdNm' => $repSHdNm,
+														'busNm' => $busNm,
+														'feeTpId' => $ftId,
+														'feeTp' => $ftNm,
+														'feeYr' => $fYr,
+														'description' => $clId.'_'.$clNm.' => '.$desc,
+														'crAmt' => $dr,
+														'drAmt' => $cr, // New Added remove if creates problem
+														'retGj' => 'GJ',
+														'repId' => $repId,
+														'repNm' => $repNm
+													);
+
+													$insRepLedAcc = $this->model->insert('ledger',$varArr);
+													if($insRepLedAcc == 1){
+														echo "<div class='success-msg'>Record is inserted Successfully.</div>";
+														if($from != 'csv'){						
+															?>
+															<script type="text/javascript">
+																setTimeout(function(){
+																	window.location.replace('index?page=ngj')},1000);
+															</script>
+															<?php
+														}
+													}else{
+														$this->messages[] = "<div class='message'>Representative Ledger Record couldn't be entered</div>";
+													}
+
+									// 			}
+												
 											}else{
-
-												$varArr = array(
-													'gjDt' => $jdt,
-													'gjTm' => $gjTm,
-													'transDt' => $transDt,
-													'clientId' => $repClId,
-													'clientNm' => $repClNm,
-													'cityId' => $ctId,
-													'cityNm' => $ctNm,
-													'hdId' => $repHdId,
-													'hdNm' => $repHdNm,
-													'sHdId' => $repSHdId,
-													'sHdNm' => $repSHdNm,
-													'busNm' => $busNm,
-													'feeTpId' => $ftId,
-													'feeTp' => $ftNm,
-													'feeYr' => $fYr,
-													'description' => $clId.'_'.$clNm.' => '.$desc,
-													'crAmt' => $dr,
-													'retGj' => 'GJ',
-													'repId' => $repId,
-													'repNm' => $repNm
-												);
-
-												$insRepLedAcc = $this->model->insert('ledger',$varArr);
-												if($insRepLedAcc == 1){
-													echo "<div class='success-msg'>Record is inserted Successfully.</div>";
-													// header("refresh:3;url=index?page=ngj");						?>
-													<script type="text/javascript">
-														setTimeout(function(){
-															window.location.replace('index?page=ngj')},1000);
-													</script>
-													<?php
-												}else{
-													$this->messages[] = "<div class='message'>Representative Ledger Record couldn't be entered</div>";
-												}
-
+												$this->messages[] = "<div class='message'>Ledger Record couldn't be entered</div>";
 											}
-
-
-
 										}else{
-											$this->messages[] = "<div class='message'>Ledger Record couldn't be entered</div>";
+											$this->messages[] = "<div class='message'>Please add Amount in Debit or Credit</div>";
 										}
 									}else{
-										$this->messages[] = "<div class='message'>Please add Amount in Debit or Credit</div>";
+										$this->messages[] = "<div class='message'>Please fill Description.</div>";
 									}
 								}else{
-									$this->messages[] = "<div class='message'>Please fill Description.</div>";
+									$this->messages[] = "<div class='message'>Please add a year for Fees</div>";
 								}
 							}else{
-								$this->messages[] = "<div class='message'>Please add a year for Fees</div>";
+								$this->messages[] = "<div class='message'>Please select a Fees Type</div>";
 							}
 						}else{
-							$this->messages[] = "<div class='message'>Please select a Fees Type</div>";
+							$this->messages[] = "<div class='message'>Something went wrong while selecting Account.</div>";
 						}
 					}else{
-						$this->messages[] = "<div class='message'>Something went wrong while selecting Account.</div>";
+						$this->messages[] = "<div class='message'>Please select an Account</div>";
 					}
+
 				}else{
-					$this->messages[] = "<div class='message'>Please select an Account</div>";
+
 				}
-
 			}else{
-
+				$this->messages[] = "<div class='message'>Date should be current or previous</div>";
 			}
 		}else{
 			$this->messages[] = "<div class='message'>Please select a valid Date.</div>";
@@ -3480,49 +3383,17 @@ ACCOUNTS RELATED AREA
 		}
 	}
 
-	// Change Fees Amount In General Journal on Click
-	// public function UpdateDrAmt($id,$drAmt){
-	// 	$drAmt = $this->protect($drAmt);
-
-	// 	$drAmtUpdated = $this->model->update('ledger',['drAmt' => $drAmt],'id='.$id);
-
-	// 	if($drAmtUpdated){
-	// 		$this->message[] = "<div class='success-msg'>Debit Amount is Updated</div>";
-	// 	}else{
-	// 		$this->message[] = "<div class='message'>Debit Amount could not be Updated</div>";
-	// 	}
-
-	// 	// Checks if any Error exist.
-	// 	if(count($this->messages) > 0){
-	// 		foreach ($this->messages as $msg) {
-	// 			echo $msg;
-	// 		}
-	// 	}
-	// }
-
-	// // Change Fees Amount In General Journal on Click
-	// public function UpdateCrAmt($id,$crAmt){
-	// 	$crAmt = $this->protect($crAmt);
-
-	// 	$crAmtUpdated = $this->model->update('ledger',['crAmt' => $crAmt],'id='.$id);
-
-	// 	if($crAmtUpdated){
-	// 		$this->message[] = "<div class='success-msg'>Credit Amount is Updated</div>";
-	// 	}else{
-	// 		$this->message[] = "<div class='message'>Credit Amount could not be Updated</div>";
-	// 	}
-
-	// 	// Checks if any Error exist.
-	// 	if(count($this->messages) > 0){
-	// 		foreach ($this->messages as $msg) {
-	// 			echo $msg;
-	// 		}
-	// 	}
-	// }
-
 	// Select Representative's Ledger Accounts
 	public function repLedAccs(){
-		$repDet = explode("_",$_SESSION['taxmagrep']);
+		if(isset($_SESSION['taxmagadmin'])){
+			$repDet = explode("_",$_SESSION['taxmagadmin']);
+		}elseif(isset($_SESSION['taxmagrep'])){
+			$repDet = explode("_",$_SESSION['taxmagrep']);
+		}elseif(isset($_SESSION['taxmagdir'])){
+			$repDet = explode("_",$_SESSION['taxmagdir']);
+		}
+
+		// $repDet = explode("_",$_SESSION['taxmagrep']);
 		$repId = $repDet[0];
 		$repNm = $repDet[1];
 
@@ -3552,13 +3423,18 @@ ACCOUNTS RELATED AREA
 	// View General Journal Entries
 
 	public function vGjEnt(){
-
-		$repDet = explode("_",$_SESSION['taxmagrep']);
+		if(isset($_SESSION['taxmagadmin'])){
+			$repDet = explode("_",$_SESSION['taxmagadmin']);
+		}elseif(isset($_SESSION['taxmagrep'])){
+			$repDet = explode("_",$_SESSION['taxmagrep']);
+		}elseif(isset($_SESSION['taxmagdir'])){
+			$repDet = explode("_",$_SESSION['taxmagdir']);
+		}
+		// $repDet = explode("_",$_SESSION['taxmagrep']);
 		$repId = $repDet[0];
 		$repNm = $repDet[1];
 
 		$vGjData = $this->model->fetchSingle('ledger',' gjDt = "'.date('Y-m-d').'" AND retGj = "GJ" AND repId='.$repId." AND sHdNm != 'Representative' ORDER BY id DESC");
-		// $vGjData = $this->model->fetchSingle('ledger',' gjDt = "'.date('Y-m-d').'" AND retGj = "GJ" AND repId='.$repId." ORDER BY id DESC");
 
 		if($vGjData->num_rows > 0){
 			while($row=$vGjData->fetch_assoc()){
@@ -3710,11 +3586,10 @@ ACCOUNTS RELATED AREA
 													'repNm' => $repNm
 												);
 
-												// echo ' => 1 : '.$fy;
 												$insRepLedAcc = $this->model->update('ledger',$varArr,' id='.($gjEid+1).' AND sHdNm = "Representative"');
 												if($insRepLedAcc == 1){
 													echo "<div class='success-msg'>Record is inserted Successfully.</div>";
-													// header("refresh:3;url=index?page=ngj");						?>
+													?>
 													<script type="text/javascript">
 														setTimeout(function(){
 															window.location.replace('index?page=ngj')},1000);
@@ -3749,12 +3624,10 @@ ACCOUNTS RELATED AREA
 													'repNm' => $repNm
 												);
 
-												// echo ' => 2 : '.$fy;
-
 												$insRepLedAcc = $this->model->update('ledger',$varArr,' id='.($gjEid+1).' AND sHdNm = "Representative"');
 												if($insRepLedAcc == 1){
 													echo "<div class='success-msg'>Record is updated Successfully.</div>";
-													// header("refresh:3;url=index?page=ngj");						?>
+												?>
 													<script type="text/javascript">
 														setTimeout(function(){
 															window.location.replace('index?page=ngj')},1000);
@@ -3883,7 +3756,6 @@ ACCOUNTS RELATED AREA
 		$repId = $repDet[0];
 		$repNm = $repDet[1];
 
-		//$vGjData = $this->model->totDrCr('ledger',' gjDt = "'.$dt.'" AND sHdNm = "Accounts Receivable" AND retGj = "retTrk" AND repId = '.$repId);
 		if($tp =='retTrk'){		
 			$vGjData = $this->model->totDrCr('ledger',' gjDt = "'.$dt.'" AND sHdNm = "Accounts Receivable" AND sHdNm != "Representative" AND retGj = "'.$tp.'" AND repId = '.$repId);		
 		}else{
@@ -3935,7 +3807,6 @@ ACCOUNTS RELATED AREA
 		$repNm = $repDet[1];
 		$repRole = $repDet[2];
 
-		//$vgjData = $this->model->fetchSingle('ledger',' gjDt="'.$dt.'" AND retGj = "GJ"');
 		$vgjData = $this->model->fetchSingle('ledger',' gjDt="'.$dt.'" AND sHdNm != "Representative" AND retGj = "GJ" AND repId = '.$repId);
 		if($vgjData->num_rows > 0){
 			while($row=$vgjData->fetch_assoc()){
@@ -3989,8 +3860,6 @@ ACCOUNTS RELATED AREA
 
 		if($fd != "" && $td != ""){
 			$accSData = $this->model->fetchSingle('ledger',' clientId='.$id.' AND gjDt>="'.$fd.'" AND gjDt<="'.$td.'" ORDER BY gjDt ASC');
-			//$accSData = $this->model->fetchSingle('gj',' clientId='.$id.' AND gjDt>="'.$fd.'" AND gjDt<="'.$td.'" AND repId='.$repId);
-			//$data = $this->model->fetchSingle('client',' id='.$id);
 
 			if($accSData->num_rows > 0){
 				while($row=$accSData->fetch_assoc()){
@@ -4081,7 +3950,7 @@ ACCOUNTS RELATED AREA
 	// Grabbing Return Type for Return Tracker Drop Down in nRetTrk.php & retTpDet.php
 
 	public function clDetData($retTpId){
-		//$retTpDet = $this->model->fetchAll('client');
+
 		if($retTpId == 'IncomeTax'){
 			$retTpDet = $this->model->fetchSingle('client',' ntnFee !=0 AND status !="inactive"');
 		}
@@ -4136,7 +4005,6 @@ ACCOUNTS RELATED AREA
 
 
 	// Insert Return Tracker
-
 	public function nRetTrk($retTDt,$retTp,$txYr,$clDet,$barCd,$subDt,$payFee,$rem,$revEraned){
 
 		$this->chkSession();
@@ -4186,8 +4054,6 @@ ACCOUNTS RELATED AREA
 					$sHdNmER = $revEranedArr[3];
 					$accIdER = $revEranedArr[4];
 					$accNmER = $revEranedArr[5];
-					// echo $hdIdER.$hdNmER.$sHdIdER.$sHdNmER.$accIdER.$accNmER;
-					// exit();
 
 					// For Normal Flow / Client Entry in Ledger
 					$varArr = array(
@@ -4253,7 +4119,6 @@ ACCOUNTS RELATED AREA
 					$retTrkIns = $this->model->insert('ledger',$varArr);
 					if($retTrkIns == 1){
 						$this->messages[] = "<div class='success-msg'>Record is inserted Successfully.</div>";
-						//header("refresh:0;url=index?page=nRetTrk");
 					}else{
 						$this->messages[] = "<div class='message'>Revenue's Record can't be entered.</div>";
 					}
@@ -4349,12 +4214,9 @@ ACCOUNTS RELATED AREA
 		$repDet = explode("_",$_SESSION['taxmagrep']);
 		$repId = $repDet[0];
 		$repNm = $repDet[1];
-
-		// $vRetTrk = $this->model->fetchSingle('ledger',' gjDt = "'.date('Y-m-d').'" AND retGj = "retTrk" AND repId='.$repId." ORDER BY id DESC");
 		
 		$vRetTrk = $this->model->fetchSingle('ledger',' retGj = "retTrk" AND repId='.$repId." ORDER BY id DESC");
 
-		//$vRetTrk = $this->model->fetchSingle('ledger',' retGj = "retTrk"');
 		if($vRetTrk->num_rows > 0){
 			while($row=$vRetTrk->fetch_assoc()){
 				$data[] = $row;
@@ -4423,8 +4285,6 @@ ACCOUNTS RELATED AREA
 					$sHdNmUER = $revEranedUpdArr[3];
 					$accIdUER = $revEranedUpdArr[4];
 					$accNmUER = $revEranedUpdArr[5];
-					// echo $hdIdUER.$hdNmUER.$sHdIdUER.$sHdNmUER.$accIdUER.$accNmUER;
-					// exit();
 
 					// For Normal Flow / Client Entry in Ledger
 					$varArr = array(
@@ -4455,7 +4315,6 @@ ACCOUNTS RELATED AREA
 					if($retTrkUpQ == 1){
 						$this->messages[] = "<div class='success-msg'>Record Updated Successfully<br />
 						You'll be redirected, if you don't redirect <a href='index?page=nRetTrk'>CLICK ME</a>.</div>";
-						//header("refresh:3;url=index?page=nRetTrk");
 					}else{
 						$this->messages[] = "<div class='message'>Record couldn't be Updated.</div>";
 					}
@@ -4499,7 +4358,6 @@ ACCOUNTS RELATED AREA
 								window.location.replace('index?page=nRetTrk')},1000);
 						</script>
 						<?php
-						//header("refresh:3;url=index?page=nRetTrk");
 					}else{
 						$this->messages[] = "<div class='message'>Record couldn't be Updated.</div>";
 					}
@@ -4640,12 +4498,8 @@ ACCOUNTS RELATED AREA
 
 	// For Director & Admin Panel - CURRENT DAY Representative's Financial Activities
 	public function repDayFinTrans($id){
-		//$listRepDayTrans = $this->model->fetchSingle('ledger',' gjDt = "'.date('Y-m-d').'" AND repId='.$id);
 
 		$listRepDayTrans = $this->model->fetchSingle('ledger',' clientNm != "Revenue Earned - Services" AND sHdNm != "Representative" AND gjDt = "'.date('Y-m-d').'" AND repId='.$id);
-
-		// $listRepDayTrans = $this->model->fetchSingle('ledger',' clientNm != "Revenue Earned - Services"  AND repId='.$id);		
-		
 		if($listRepDayTrans->num_rows > 0){
 			while($row = $listRepDayTrans->fetch_assoc()){
 				$data[] = $row;
@@ -4655,8 +4509,6 @@ ACCOUNTS RELATED AREA
 	}
 
 	// For Director & Admin Panel - DATE WISE Representative's Financial Activities Total DR & CR
-	//public function cdrfaDrCr	
-
 	// For Director & Admin Panel - DATE WISE Representative's Financial Activities
 	public function repDWFinTrans($id,$fd,$td){
 		$listRepDayTrans = $this->model->fetchSingle('ledger',' clientNm != "Revenue Earned - Services" AND sHdNm != "Representative" AND repId='.$id.' AND gjDt >= "'.$fd.'" AND gjDt <="'.$td.'" ORDER BY gjDt');
@@ -4780,7 +4632,6 @@ ACCOUNTS RELATED AREA
 		$td = $this->protect($td);
 
 		$vAccSHdOpBal = $this->model->emptyCmd('SELECT SUM(drAmt-crAmt) as accSHdOpBal FROM ledger WHERE sHdId = '.$sHdId.' AND clientId='.$id.' AND gjDt < "'.$fd.'"');
-		// $vAccSHdOpBal = $this->model->emptyCmd('SELECT * FROM ledger');
 		if($vAccSHdOpBal->num_rows > 0){
 			while($row=$vAccSHdOpBal->fetch_assoc()){
 				$data[] = $row;
@@ -4796,7 +4647,6 @@ ACCOUNTS RELATED AREA
 		$td = $this->protect($td);
 
 		$vAccSHdTotDr = $this->model->emptyCmd('SELECT SUM(drAmt) as accSHdTotDr FROM ledger WHERE sHdId = '.$sHdId.' AND clientId='.$id.' AND gjDt >= "'.$fd.'" AND gjDt <= "'.$td.'"');
-		// $vAccSHdTotDr = $this->model->emptyCmd('SELECT * FROM ledger');
 		if($vAccSHdTotDr->num_rows > 0){
 			while($row=$vAccSHdTotDr->fetch_assoc()){
 				$data[] = $row;
@@ -4812,7 +4662,6 @@ ACCOUNTS RELATED AREA
 		$td = $this->protect($td);
 
 		$vAccSHdTotCr = $this->model->emptyCmd('SELECT SUM(crAmt) as accSHdTotCr FROM ledger WHERE sHdId = '.$sHdId.' AND clientId='.$id.' AND gjDt >= "'.$fd.'" AND gjDt <= "'.$td.'"');
-		// $vAccSHdTotCr = $this->model->emptyCmd('SELECT * FROM ledger');
 		if($vAccSHdTotCr->num_rows > 0){
 			while($row=$vAccSHdTotCr->fetch_assoc()){
 				$data[] = $row;
@@ -4945,65 +4794,40 @@ ACCOUNTS RELATED AREA
 
 
 
+	public function emptyRepresentatives(){
+		$viewemptyRepresentatives = $this->model->fetchSingle('ledger','drAmt= 0 AND crAmt = 0');
+		if($viewemptyRepresentatives->num_rows > 0){
+			while($row=$viewemptyRepresentatives->fetch_assoc()){
+				$data[] = $row;
+			}
+			// return $data;
+			$ids = 0;
+			foreach($data as $dt){
+
+				echo $dt['id'];
+				echo $dt['clientNm'];
+				echo $dt['drAmt'];
+				echo $dt['crAmt'];
+				echo '<br />';
+				// $viewemptyRepresentatives1 = $this->model->fetchSingle('ledger','id='.($dt['id']-1));
+				// if($viewemptyRepresentatives1->num_rows > 0){
+				// 	while($row1=$viewemptyRepresentatives1->fetch_assoc()){
+				// 		$data1[] = $row1;
+				// 	}
+
+				// 	return $data1;
+
+					// foreach($data1 as $dt1){
+					// 	echo $dt1['id'];
+					// 	echo $dt1['clientNm'];
+					// 	echo $dt1['drAmt'];
+					// 	echo $dt1['crAmt'];
+					// }
+					echo '<hr />';
+				// }
+			}
+		}		
+	}
 	// Closing Class Controller
-
 }
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

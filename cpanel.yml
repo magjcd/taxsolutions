@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/fmjrrw3rl783/public_html/app.sawrevataxsolution.com/
+    - /bin/cp * $DEPLOYPATH

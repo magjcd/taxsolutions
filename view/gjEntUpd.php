@@ -35,7 +35,7 @@ $ContObj = new Controller();
 			?>
 	</select>
 
-	<input type="date" name="gjDt" class="gjFldM" value="<?php echo $gjEdt['gjDt']; ?>">
+	<input type="date" name="gjDt" class="gjFldM" value="<?php echo $gjEdt['gjDt']; ?>" onkeydown="return false">
 
 
 

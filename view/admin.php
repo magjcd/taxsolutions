@@ -70,6 +70,12 @@ $ContObj->adminLogChk();
 							<li><a href="index?page=trialBalance" accesskey="t"><i class="fa fa-file fa-lg fa-fw"></i>
 							Trial Balance</a></li>
 
+							<li><a href="index?page=gjCSV" accesskey="v"><i class="fa fa-file fa-lg fa-fw"></i>
+							Upload GJ CSV</a></li>
+
+							<!-- <li><a href="index?page=empty_respresentatives" accesskey="v"><i class="fa fa-file fa-lg fa-fw"></i>
+							Empty Representatives</a></li> -->
+
 						</ul>
 					</li>
 

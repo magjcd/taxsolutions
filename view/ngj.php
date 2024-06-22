@@ -32,11 +32,9 @@ if($ClientDt){
 		$repDet = explode("_",$_SESSION['taxmagrep']);
 		$repId = $repDet[0];
 		$repNm = $repDet[1];
-		echo gettype($dr);
-		echo gettype($cr);
-		// return;
+
 		// Sending information to Controller for saving in Database alongwith Representative information
-		// $ContObj->nGj($jdt,$_POST['accNm'],$ft,$fYr,$desc,$dr,$cr,$repId,$repNm,$repLedAcc);
+		$ContObj->nGj($jdt,$_POST['accNm'],$ft,$fYr,$desc,$dr,$cr,$repId,$repNm,$repLedAcc);
 	}
 ?>
 <div class="full-width">
@@ -65,7 +63,7 @@ if($ClientDt){
 			?>
 	</select>
 
-	<input type="date" name="gjDt" class="gjFldM" value="<?php echo date('Y-m-d'); ?>">
+	<input type="date" name="gjDt" class="gjFldM" value="<?php echo date('Y-m-d'); ?>" onkeydown="return false">
 	<!-- <input type="text" name="gjDt" id="gjFld" value="<?php //echo date('d/m/Y');?>" disabled> -->
 
 <!-- 	<select name="accNm" class="gjFldL" autofocus="autofocus">

@@ -65,7 +65,7 @@ if(isset($_POST['user_name'])){
 			$user_pwd = (isset($_POST['user_pwd']) ? $_POST['user_pwd'] : "");
 			//$user_role = (isset($_POST['user_role']) ? $_POST['user_role'] : "");
 			?>
-			<form action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>" method="post">
+			<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
 			<!--<form action="controller/login-chk.php" method="post">-->
 				<input type="text" name="user_name" value="<?php echo $user_name; ?>" placeholder="User Name" autofocus autocomplete="off">
 				<br />
