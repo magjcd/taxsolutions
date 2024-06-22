@@ -1,6 +1,6 @@
 <div class="row full-column">
 	<?php 
-	$ContObj->dirLogChk();
+	// $ContObj->dirLogChk();
 	$vShdAcc = $ContObj->vShdAcc();
 	// echo '<pre>';
 	// print_r($vShdAcc);

@@ -8,12 +8,12 @@
 		<!-- HEADING ROW -->
 		<div class="row snm-tmenu mb-5">
 			<div class="col-md-4 d-flex" style="display: inline-flex; justify-content: flex-start; align-items: flex-start;">
-				<h1 style="font-weight: bold;" id="site-nm">MyTaxSol</h1>
+				<h1 style="font-weight: bold;" id="site-nm">SawReva</h1>
 				
 			</div>
 
 			<div class="col-md-8 d-flex" style="display: inline-flex; justify-content: flex-start; align-items: flex-start;">
-				<h3 style="font-weight: bold; margin-top: 28px;" id="site-nm">MyTaxSol</h3>
+				<h3 style="font-weight: bold; margin-top: 28px;" id="site-nm">SawReva</h3>
 				<ul class="top-menu mt-4">
 					<li><a href="index"><i class="fa fa-home fa-lg fa-fw"></i>
 					</a></li>

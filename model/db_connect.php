@@ -10,15 +10,15 @@ class db_connect {
 	// private $db_pass = "Fm6HnXCk9N4bVz";	
 	// private $db_name = "epiz_26789215_durrani";	
 
-	private $db_host = "184.168.102.151";	
-	private $db_user = "sawrevajcd";	
-	private $db_pass = "Titoo#02Dhonta";	
-	protected $db_name = "sawreva";	
-
-	// private $db_host = "localhost";	
-	// private $db_user = "root";	
-	// private $db_pass = "";	
+	// private $db_host = "184.168.102.151";	
+	// private $db_user = "sawrevajcd";	
+	// private $db_pass = "Titoo#02Dhonta";	
 	// protected $db_name = "sawreva";	
+
+	private $db_host = "localhost";	
+	private $db_user = "root";	
+	private $db_pass = "";	
+	protected $db_name = "sawreva";	
 
 
 	protected $connOk = false;

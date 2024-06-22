@@ -11,7 +11,7 @@ $ContObj->adminLogChk();
 			</div>
 
 			<div class="col-md-8 d-flex" style="display: inline-flex; justify-content: flex-start; align-items: flex-start;">
-				<h3 style="font-weight: bold; margin-top: 28px;">MyTaxSol</h3>
+				<h3 style="font-weight: bold; margin-top: 28px;">SawReva</h3>
 				<ul class="top-menu mt-4">
 					<li><a href="index" accesskey="h"><i class="fa fa-tachometer fa-lg fa-fw"></i>
 					</a></li>
@@ -73,6 +73,9 @@ $ContObj->adminLogChk();
 							<li><a href="index?page=gjCSV" accesskey="v"><i class="fa fa-file fa-lg fa-fw"></i>
 							Upload GJ CSV</a></li>
 
+							<li><a href="index?page=vHdWDt" accesskey="t"><i class="fa fa-file fa-lg fa-fw"></i>
+							Header Wise Report</a></li>
+							
 							<!-- <li><a href="index?page=empty_respresentatives" accesskey="v"><i class="fa fa-file fa-lg fa-fw"></i>
 							Empty Representatives</a></li> -->
 
