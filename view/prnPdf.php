@@ -42,7 +42,7 @@ $repNm = $repDet[1];
 				foreach ($rTrkPrnIdDet as $data) {
 					$userNm = $data['repNm'];
 					$html .= "<tr style='font-size: 9px;'>
-						<td style='font-size: 9px;'>".$data['gjTm']."</td>
+						<td style='font-size: 9px;'>".$data['gjDt']."</td>
 						<td style='font-size: 9px;'>".$data['clientNm']."</td>
 						<td style='font-size: 9px;'>".$data['busNm']."</td>
 						<td style='font-size: 9px;'>".$data['cityNm']."</td>
@@ -123,7 +123,7 @@ $repNm = $repDet[1];
 				foreach ($rTrkPrnIdDet as $data) {
 					$userNm = $data['repNm'];
 					$html .= "<tr style='font-size: 9px;'>
-						<td style='font-size: 9px;'>".$data['gjTm']."</td>
+						<td style='font-size: 9px;'>".$data['gjDt']."</td>
 						<td style='font-size: 9px;'>".$data['clientNm']."</td>
 						<td style='font-size: 9px;'>".$data['busNm']."</td>
 						<td style='font-size: 9px;'>".$data['cityNm']."</td>

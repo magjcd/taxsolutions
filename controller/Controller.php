@@ -3135,7 +3135,7 @@ ACCOUNTS RELATED AREA
 		$repId = $repDet[0];
 		$repNm = $repDet[1];
 
-		$prevBalRep = $this->model->prevBal('ledger',' gjDt<"'.$dt.'" AND retGj = "GJ" AND sHdNm != "Representative" AND repId='.$repId);
+		$prevBalRep = $this->model->prevBal('ledger',' transDt<"'.$dt.'" AND retGj = "GJ" AND sHdNm != "Representative" AND repId='.$repId);
 		if($prevBalRep->num_rows > 0){
 			while($row=$prevBalRep->fetch_assoc()){
 				$data[] = $row;
@@ -3740,7 +3740,7 @@ ACCOUNTS RELATED AREA
 		$repId = $repDet[0];
 		$repNm = $repDet[1];
 
-		$vGjData = $this->model->totDrCr('ledger',' gjDt = "'.$dt.'" AND sHdNm != "Representative" AND retGj = "GJ" AND repId='.$repId);
+		$vGjData = $this->model->totDrCr('ledger',' transDt = "'.$dt.'" AND sHdNm != "Representative" AND retGj = "GJ" AND repId='.$repId);
 		if($vGjData->num_rows > 0){
 			while($row=$vGjData->fetch_assoc()){
 				$data[] = $row;
@@ -3757,9 +3757,9 @@ ACCOUNTS RELATED AREA
 		$repNm = $repDet[1];
 
 		if($tp =='retTrk'){		
-			$vGjData = $this->model->totDrCr('ledger',' gjDt = "'.$dt.'" AND sHdNm = "Accounts Receivable" AND sHdNm != "Representative" AND retGj = "'.$tp.'" AND repId = '.$repId);		
+			$vGjData = $this->model->totDrCr('ledger',' transDt = "'.$dt.'" AND sHdNm = "Accounts Receivable" AND sHdNm != "Representative" AND retGj = "'.$tp.'" AND repId = '.$repId);		
 		}else{
-			$vGjData = $this->model->totDrCr('ledger',' gjDt = "'.$dt.'" AND sHdNm != "Representative" AND retGj = "'.$tp.'" AND repId = '.$repId);
+			$vGjData = $this->model->totDrCr('ledger',' transDt = "'.$dt.'" AND sHdNm != "Representative" AND retGj = "'.$tp.'" AND repId = '.$repId);
 		}
 
 		if($vGjData->num_rows > 0){
@@ -3807,7 +3807,7 @@ ACCOUNTS RELATED AREA
 		$repNm = $repDet[1];
 		$repRole = $repDet[2];
 
-		$vgjData = $this->model->fetchSingle('ledger',' gjDt="'.$dt.'" AND sHdNm != "Representative" AND retGj = "GJ" AND repId = '.$repId);
+		$vgjData = $this->model->fetchSingle('ledger',' transDt="'.$dt.'" AND sHdNm != "Representative" AND retGj = "GJ" AND repId = '.$repId);
 		if($vgjData->num_rows > 0){
 			while($row=$vgjData->fetch_assoc()){
 				$data[] = $row;
@@ -4719,7 +4719,7 @@ ACCOUNTS RELATED AREA
 			$repId = $repDet[0];
 			$repNm = $repDet[1];
 
-			$rTrkPrnIdDet = $this->model->fetchSingle('ledger',' gjDt = "'.$rTrkPrnDt.'" AND clientNm != "Revenue Earned - Services" AND sHdNm != "Representative" AND retGj = "'.$tp.'" AND repId='.$repId);
+			$rTrkPrnIdDet = $this->model->fetchSingle('ledger',' transDt = "'.$rTrkPrnDt.'" AND clientNm != "Revenue Earned - Services" AND sHdNm != "Representative" AND retGj = "'.$tp.'" AND repId='.$repId);
 			if($rTrkPrnIdDet->num_rows > 0){
 				while($row = $rTrkPrnIdDet->fetch_assoc()){
 					$data[] = $row;

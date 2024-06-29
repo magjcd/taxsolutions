@@ -15,7 +15,7 @@ $gjDet = $ContObj->vGjEntDt();
 		<?php }}?>
 		</select> -->
 
-		<input type="text" name="vgj" id="vgj" list="vgjv" autofocus>
+		<input type="text" name="vgj" id="vgj" list="vgjv" placeholder="dd-mm-yyyy" autofocus>
 		<datalist id="vgjv">
 			<?php if($gjDet){
 				foreach($gjDet as $gjData){
